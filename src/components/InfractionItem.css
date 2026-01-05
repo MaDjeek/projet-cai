@@ -1,0 +1,146 @@
+.infraction-item {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.2s;
+  position: relative;
+}
+
+.infraction-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 15px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.infraction-item:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.btn-delete {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.btn-delete:hover {
+  background-color: #c0392b;
+  transform: scale(1.1);
+}
+
+.btn-edit {
+  position: absolute;
+  top: 10px;
+  right: 60px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.btn-edit:hover {
+  background-color: #2980b9;
+  transform: scale(1.1);
+}
+
+.infraction-info {
+  flex: 1;
+}
+
+.infraction-info h3 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #2980b9;
+  margin-bottom: 5px;
+}
+
+.infraction-info p {
+  font-size: 14px;
+  color: #555;
+  margin: 3px 0;
+}
+
+.infraction-info .lieu,
+.infraction-info .date {
+  font-style: italic;
+  color: #888;
+}
+
+.status-pill {
+  display: flex;
+  align-items: center;
+  margin-right: 100px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.badge.open {
+  background-color: #95a5a6;
+  color: white;
+}
+
+.badge.closed {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.badge.in_progress {
+  background-color: #f39c12;
+  color: white;
+}
+
+.badge.resolved {
+  background-color: #27ae60;
+  color: white;
+}
+
+.badge.unknown {
+  background-color: #7f8c8d;
+  color: white;
+}
+
+.comments-section {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #ddd;
+}
+
+.comments-section h4 {
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.comments-section ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.comments-section li {
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 3px;
+}
