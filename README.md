@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Fonctionnalités implémentées :
 
-## Getting Started
+Authentification & Gestion des Utilisateurs
+  Connexion avec email/mot de passe
+  Inscription de nouveaux comptes (prénom, nom, email, mot de passe)
+  Déconnexion
+  Auto-login après inscription réussie
+  Gestion de 3 rôles : admin, officer, user
+  Stockage des utilisateurs dans localStorage
+  Validation des emails existants lors de l'inscription
+  
+Gestion des Infractions
+  Affichage : Liste paginée des infractions (10 par page)
+  Filtrage : Par type, statut, recherche textuelle dans la description
+  Tri : Par date (plus récent/plus ancien)
+  Statistiques : Compteurs par statut
+  Création : Formulaire de signalement d'infraction
+  Modification : Édition des infractions (admin/officer uniquement)
+  Suppression : Suppression d'infractions (admin/officer uniquement)
+  Signalement anonyme : Possibilité de signaler sans compte
+  Signalement identifié : Option pour rester anonyme même connecté
+  Commentaires : Affichés au clic sur l'infraction
+  Persistance : Toutes les modifications sauvegardées dans localStorage
+  
+Contrôle d'Accès (Role-Based Access Control)
+  Non authentifiés : Redirection vers page d'accueil, signalement anonyme uniquement
+  Users : Accès uniquement à leurs propres signalements
+  Officers/Admins : Accès à toutes les infractions + édition/suppression
 
-First, run the development server:
+Interface Utilisateur
+  Page d'accueil :
+    Version non connectée : 3 options (connexion, inscription, signalement anonyme)
+    Version connectée : Bienvenue personnalisée + accès signalements/création
+  Header : Navigation avec boutons connexion/inscription ou déconnexion selon l'état
+  Design responsive : Adaptation mobile/desktop
+  Badge de statut : Pills colorées (Ouverte, Fermée, En cours, Résolue)
+  Formulaires stylisés : Connexion, inscription, ajout/édition d'infractions
+  Pagination : Navigation entre pages d'infractions
+  Barre de recherche : Design cohérent avec le reste de la page
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Persistance des Données
+  localStorage : Sauvegarde automatique infractions et utilisateurs
+  Données mock : Population initiale avec données de test
+  Synchronisation : Mise à jour automatique après chaque modification
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Responsive Design
+  Grille adaptative pour les options sur la page d'accueil
+  Formulaires optimisés mobile
+  Barre de recherche responsive
